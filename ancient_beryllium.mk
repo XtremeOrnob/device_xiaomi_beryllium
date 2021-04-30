@@ -6,9 +6,11 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common NezukoOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
+# Inherit some common ancient stuff.
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+ANCIENT_OFFICIAL ?= true
+ANCIENT_GAPPS ?= true
+TARGET_USES_BLUR := true
 
 # Gapps Sector
 TARGET_GAPPS_ARCH := arm64
@@ -19,17 +21,11 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SCREEN_HEIGHT := 2246
 TARGET_SCREEN_WIDTH := 1080
 
-# Maintainer Sector
-NEZUKO_MAINTAINER := XtremeOrnob
-NEZUKO_BUILD_TYPE := UNOFFICIAL
-PRODUCT_PRODUCT_PROPERTIES += \
-			        ro.nezuko.cpu=SDM845
-
 # FaceUnlock Sector
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_beryllium
+PRODUCT_NAME := ancient_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
