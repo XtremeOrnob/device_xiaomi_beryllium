@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ancient_beryllium.mk
+    $(LOCAL_DIR)/cesium_beryllium.mk
 
 COMMON_LUNCH_CHOICES := \
-    ancient_beryllium-user \
-    ancient_beryllium-userdebug \
-    ancient_beryllium-eng
+    cesium_beryllium-user \
+    cesium_beryllium-userdebug \
+    cesium_beryllium-eng
