@@ -24,6 +24,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SCREEN_HEIGHT := 2246
 TARGET_SCREEN_WIDTH := 1080
 
+# Inherit Moto FaceUnlock
+$(call inherit-product, external/motorola/faceunlock/config.mk)
+
 # FaceUnlock Sector
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
