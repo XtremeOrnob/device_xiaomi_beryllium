@@ -11,11 +11,8 @@ $(call inherit-product, device/xiaomi/beryllium/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
-# Inherit some common ancient stuff.
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
-ANCIENT_OFFICIAL ?= true
-ANCIENT_GAPPS ?= true
-TARGET_USES_BLUR := true
+# Inherit some common Descendant stuff.
+$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
 # Gapps Sector
 TARGET_GAPPS_ARCH := arm64
@@ -29,8 +26,11 @@ TARGET_SCREEN_WIDTH := 1080
 # FaceUnlock Sector
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# Descendant
+TARGET_SUPPORTS_BLUR := true
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := ancient_beryllium
+PRODUCT_NAME := descendant_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
